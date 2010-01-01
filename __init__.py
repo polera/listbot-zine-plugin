@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    zine.plugins.miniblog_theme
+    zine.plugins.listbot_theme
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     Very simple zine theme.
@@ -26,5 +26,5 @@ THEME_SETTINGS = {
 }
 
 def setup(app, plugin):
-    app.add_theme('miniblog', TEMPLATE_FILES, plugin.metadata, THEME_SETTINGS)
-    app.add_shared_exports('miniblog_theme', SHARED_FILES)
+    app.add_theme('listbot', TEMPLATE_FILES, plugin.metadata, THEME_SETTINGS)
+    app.add_shared_exports('listbot_theme', SHARED_FILES)

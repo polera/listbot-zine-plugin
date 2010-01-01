@@ -1,31 +1,50 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-  "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="{{ cfg.language|e }}">
-<head>
-  <title>{% block title %}{% endblock %} &mdash; {{ cfg.blog_title|e }}</title>
-  <link rel="stylesheet" type="text/css" href="{{ shared_url('miniblog_theme::style.css') }}">
-  {{ get_page_metadata() }}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd"> 
+<html> 
+<head> 
+<title>listbot.org</title>
+<link rel="stylesheet" href="{{ shared_url('listbot_theme::listbot.css') }}"/>
 </head>
 <body>
-  <div class="page">
-    <div class="header">
-      <h1><a href="{{ url_for('blog/index')|e }}">{{ cfg.blog_title|e }}</a></h1>
-      <p class="description">{{ cfg.blog_tagline }}</p>
-    </div>
-    <div class="contentwrapper">
-      <div class="contents">
-        {{ emit_event('before-contents-rendered') }}
-        {% block contents %}{% endblock %}
-        {{ emit_event('after-contents-rendered') }}
-      </div>
-      <div class="sidebar">
-        {{ render_widgets() }}
-      </div>
-    </div>
-    <div class="footer">
-      <p>{% trans zine='<a href="http://zine.pocoo.org/">Zine</a>'
-        %}Proudly powered by {{ zine }}.{% endtrans %}</p>
-    </div>
-  </div>
+<div id="header"><a href="/">
+<img src="{{ shared_url('listbot_theme::listbot_grouped.png')}}" class="header"/><span class="tagline">listbot.org</span>
+<div id="sub50">[ Sometimes I do maths ]</div></a>
+</div>
+
+<div id="meta">
+        <div id="about">
+    		<h2>About</h2>
+    		<img src="{{ shared_url('listbot_theme::james.jpg')}}" class="manga"/><br/>
+    		<b>James Polera</b><br/>
+    		Husband, father,<br/>
+    		programmer.<br/>
+    	</div>
+        <div class="sidebar">
+            <h2>Navigation</h2>
+          {{ render_widgets() }}
+        </div>
+		<div id="reading">
+			<h2>Reading</h2>
+		    <i><a href="http://oreilly.com/catalog/9780596514556/">Visualizing Data</a></i> by Ben Fry
+		</div>
+		<div id="elsewhere">
+			<h2>Elsewhere</h2>
+		    <ul>
+				<li><a href="http://twitter.com/uncryptic/">Twitter</a></li>
+				<li><a href="http://bitbucket.org/polera/">bitbucket.org</a></li>
+				<li><a href="https://github.com/polera/">github.com</a></li>
+				<li><a href="http://djangopeople.net/polera/">Django People</a></li>
+				<li><a href="http://djangogigs.com/developers/uncryptic-communications/">Djangogigs</a></li>
+				<li><a href="http://flickr.com/p0lera/">Flickr</a></li>
+				<li><a href="http://delicious.com/polera/">Delicious</a></li>
+				<li><a href="http://vimeo.com/polera/">Vimeo</a></li>
+			</uL>
+		</div>
+</div>
+<div class="contents">
+    {{ emit_event('before-contents-rendered') }}
+    {% block contents %}{% endblock %}
+    {{ emit_event('after-contents-rendered') }}
+</div>
 </body>
 </html>

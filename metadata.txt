@@ -1,12 +1,8 @@
-Name: Miniblog Theme
-Name[de]: Miniblog Thema
-Plugin URL: http://zine.pocoo.org/plugins/miniblog_theme
-Author: Armin Ronacher <armin.ronacher@active-4.com>
-Author URL: http://lucumr.pocoo.org/
+Name: Listbot Theme
+Plugin URL: http://listbot.org/static/listbot_theme
+Author: James Polera <james@listbot.org>
+Author URL: http://listbot.org/
 License: BSD
 Version: 0.1
-Description: A very simple theme for tumblelogs or whatever inspired by\
- the flickr design.
-Description[de]: Ein einfaches Design für thublelogs und ähnliches,\
- inspiriert durch das flickr Design.
-Preview: miniblog_theme::preview.png
+Description: The listbot.org theme
+Preview: listbot_theme::preview.png
