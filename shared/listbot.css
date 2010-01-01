@@ -50,6 +50,9 @@ div#header {
 	
 }
 
+div#header img{
+   border: 0px;
+}
 
 img.header{
 	width: 8%;
